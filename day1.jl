@@ -1,7 +1,7 @@
 function split_by_elf(lines::Vector{String})
     grouped_lines = Vector{Int32}[]
     current_group = Int32[]
-    for i in 1:length(lines)
+    for i in eachindex(lines)
         if lines[i] == ""
             push!(grouped_lines, current_group)
             current_group = Int32[]
